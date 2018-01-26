@@ -8,14 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class FizzbuzzController {
     @RequestMapping("/")
     public String fizzbuzz(){
-        String finalResult="fizz";
+        String finalResult="";
+
 for(int i = 1 ; i <=100; i++){
+    System.out.println(i);
     if ( i % 3  == 0 ){
-    System.out.println("fizz");}
+    System.out.println("fizz");
+   finalResult+= "fizz";}
     if (i % 5 == 0 ){
-    System.out.println("buzz");}
+    System.out.println("buzz");
+    finalResult+= ("buzz");}
     if ( i % 3== 0 && i % 5 == 0){
         System.out.println("fizzbuzz");
+        finalResult+= ("fizzbuzz");
             }
 
         }
